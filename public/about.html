@@ -1,0 +1,137 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>LeeYi Studio</title>
+</head>
+
+<body class="h-screen"> <!-- 主體: 全高 -->
+    <div class="w-full h-[calc(100vh-212px)]"> <!-- 導覽列 + 標題: 全寬, -212高 -->
+        <div class="w-full fixed bg-purple-700 pb-6"> <!-- 導覽列: 全寬, 固定, 灰底 -->
+            <div class="grid grid-cols-2"> <!-- 用 grid 把導覽列拆成兩塊 -->
+                <div class="col-start-1 pt-6 pl-6 flex gap-8"> <!-- 第一塊在起點, padding 左上各6, 搭配 flex 把 gap 設為 8 -->
+                    <a class="text-white text-3xl font-semibold hover:underline" href="./index.html"> <!-- 設定字體, 連結 -->
+                        首頁
+                    </a>
+
+                    <a class="text-white text-3xl font-semibold hover:underline" href="./about.html"> <!-- 設定字體, 連結 -->
+                        關於
+                    </a>
+                </div>
+
+                <div class="col-end-3 pt-6 pr-6 flex gap-8 flex-row-reverse"> <!-- 第二塊在終點, padding 右上各6, 搭配 flex 把 gap 設為 8, 並用 row-reverse 使其靠右 -->
+                    <a class="text-white text-3xl font-semibold hover:underline" href="./3Dgame.html"> <!-- 設定字體, 連結 -->
+                        3D遊戲
+                    </a>
+
+                    <a class="text-white text-3xl font-semibold hover:underline" href="./2Dgame.html"> <!-- 設定字體, 連結 -->
+                        2D遊戲
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="h-full grid place-content-center bg-purple-600"> <!-- 標題: 區域全高, 置中, 灰底 -->
+            <div class="text-white text-9xl font-semibold mt-6"> <!-- 設定字體 -->
+                工作室成員
+            </div>
+        </div>
+    </div>
+    <div class="w-full flex justify-center border">
+        文字: 全寬, 置中, 邊線
+    </div>
+    <div class="flex justify-center"> <!-- 註腳: 置中 -->
+        <div class="bg-white flex flex-col md:flex-row w-full max-w-screen-lg gap-8 md:gap-16 px-8 py-8 text-sm"> <!-- 參考: https://fresh.deno.dev/components#Footer -->
+            <div class="flex-1">
+                <div class="flex items-center gap-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="inline-block" width="24" height="24"
+                        viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <circle cx="12" cy="12" r="9"></circle>
+                        <line x1="9" y1="9" x2="15" y2="15"></line>
+                        <polyline points="15 9 9 9 9 15"></polyline>
+                    </svg>
+                    <div class="font-bold text-2xl">
+                        LeeYi
+                    </div>
+                </div>
+                <div class="text-gray-500">
+                    Full Stack Engineer
+                </div>
+            </div>
+            <div class="mb-4">
+                <div class="font-bold">Social</div>
+                <ul class="mt-2">
+                    <li class="mt-2">
+                        <a class="text-gray-500 hover:text-gray-700"
+                            href="https://www.facebook.com/people/%E6%9D%8E%E6%98%93/100024822601029/">
+                            Facebook
+                        </a>
+                    </li>
+                    <li class="mt-2">
+                        <a class="text-gray-500 hover:text-gray-700" href="https://www.instagram.com/leeyi.user/">
+                            Instagram
+                        </a>
+                    </li>
+                    <li class="mt-2">
+                        <a class="text-gray-500 hover:text-gray-700" href="https://twitter.com/LeeYi96652965">
+                            Twitter
+                        </a>
+                    </li>
+                    <li class="mt-2">
+                        <a class="text-gray-500 hover:text-gray-700"
+                            href="https://www.youtube.com/channel/UCkCfLC0DFhDNSN1pnhe-KLw">
+                            YouTube
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="mb-4">
+                <div class="font-bold">Menu</div>
+                <ul class="mt-2">
+                    <li class="mt-2">
+                        <a class="text-gray-500 hover:text-gray-700" href="./index.html">
+                            首頁
+                        </a>
+                    </li>
+                    <li class="mt-2">
+                        <a class="text-gray-500 hover:text-gray-700" href="./about.html">
+                            關於
+                        </a>
+                    </li>
+                    <li class="mt-2">
+                        <a class="text-gray-500 hover:text-gray-700" href="./2Dgame.html">
+                            2D遊戲
+                        </a>
+                    </li>
+                    <li class="mt-2">
+                        <a class="text-gray-500 hover:text-gray-700" href="./3Dgame.html">
+                            3D遊戲
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="text-gray-500 space-y-2">
+                <div class="text-xs">
+                    Copyright © 2024 LeeYi-user<br />
+                    All right reserved.
+                </div>
+                <a href="https://github.com/LeeYi-user/MyWebsite" class="inline-block hover:text-black">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24"
+                        height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path
+                            d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5">
+                        </path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
