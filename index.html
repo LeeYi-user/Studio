@@ -9,8 +9,8 @@
 </head>
 
 <body class="h-screen"> <!-- 主體: 全高 -->
-    <div class="w-full h-3/4"> <!-- 導覽列 + 標題: 全寬, 4分之3高 -->
-        <div class="w-full fixed bg-black"> <!-- 導覽列: 全寬, 固定, 黑底 -->
+    <div class="w-full h-[calc(100vh-212px)]"> <!-- 導覽列 + 標題: 全寬, -212高 -->
+        <div class="w-full fixed bg-gray-900 pb-6"> <!-- 導覽列: 全寬, 固定, 灰底 -->
             <div class="grid grid-cols-2"> <!-- 用 grid 把導覽列拆成兩塊 -->
                 <div class="col-start-1 pt-6 pl-6 flex gap-8"> <!-- 第一塊在起點, padding 左上各6, 搭配 flex 把 gap 設為 8 -->
                     <a class="text-white text-3xl font-semibold hover:underline" href="./index.html"> <!-- 設定字體, 連結 -->
@@ -33,8 +33,8 @@
                 </div>
             </div>
         </div>
-        <div class="h-full grid place-content-center bg-black"> <!-- 標題: 區域全高, 置中, 黑底 -->
-            <div class="text-white text-9xl font-semibold"> <!-- 設定字體 -->
+        <div class="h-full grid place-content-center bg-gray-800"> <!-- 標題: 區域全高, 置中, 灰底 -->
+            <div class="text-white text-9xl font-semibold mt-6"> <!-- 設定字體 -->
                 李易的工作室
             </div>
         </div>
@@ -42,8 +42,8 @@
     <!-- <div class="w-full flex justify-center border">
         文字: 全寬, 置中, 邊線
     </div> -->
-    <div class="h-1/4 flex justify-center"> <!-- 註腳: 4分之1高, 置中 -->
-        <div class="bg-white flex flex-col md:flex-row w-full max-w-screen-lg gap-8 md:gap-16 px-8 py-8 text-sm"> <!-- 來源: https://fresh.deno.dev/components#Footer -->
+    <div class="flex justify-center"> <!-- 註腳: 置中 -->
+        <div class="bg-white flex flex-col md:flex-row w-full max-w-screen-lg gap-8 md:gap-16 px-8 py-8 text-sm"> <!-- 參考: https://fresh.deno.dev/components#Footer -->
             <div class="flex-1">
                 <div class="flex items-center gap-1">
                     <svg xmlns="http://www.w3.org/2000/svg" class="inline-block" width="24" height="24"
