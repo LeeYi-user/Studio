@@ -269,6 +269,7 @@ function start()
 {
     //更改畫面上的HTML跟CSS
     document.getElementById("start").hidden = true;
+    document.getElementById("back").hidden = true;
     document.getElementById("score").style.marginTop = "700px";
     document.getElementById("score").innerHTML = 0;
 

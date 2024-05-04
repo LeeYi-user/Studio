@@ -23,7 +23,7 @@
     margin-top: 300px;
 }
 
-#start
+#start, #back
 {
     border: none;
     color: white;
@@ -33,7 +33,7 @@
     background-color: gray;
 }
 
-#start:hover
+#start:hover, #back:hover
 {
     background: black;
 }
