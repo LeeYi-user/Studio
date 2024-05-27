@@ -6,38 +6,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
     <title>LeeYi Studio</title>
+    <link href="assets/css/slider.css" rel="stylesheet">
 </head>
 
 <body class="h-screen"> <!-- 主體: 全高 -->
     <div class="w-full h-[calc(100vh-212px)]"> <!-- 導覽列 + 標題: 全寬, -212高 -->
-        <div class="w-full fixed bg-gray-900 pb-6"> <!-- 導覽列: 全寬, 固定, 灰底 -->
-            <div class="grid grid-cols-2"> <!-- 用 grid 把導覽列拆成兩塊 -->
-                <div class="col-start-1 pt-6 pl-6 flex gap-8"> <!-- 第一塊在起點, padding 左上各6, 搭配 flex 把 gap 設為 8 -->
-                    <a class="text-white text-3xl font-semibold hover:text-pink-600" href="./index.html"> <!-- 設定字體, 連結 -->
-                        首頁
-                    </a>
-
-                    <a class="text-white text-3xl font-semibold hover:text-pink-600" href="./about.html"> <!-- 設定字體, 連結 -->
-                        關於
-                    </a>
-                </div>
-
-                <div class="col-end-3 pt-6 pr-6 flex gap-8 flex-row-reverse"> <!-- 第二塊在終點, padding 右上各6, 搭配 flex 把 gap 設為 8, 並用 row-reverse 使其靠右 -->
-                    <a class="text-white text-3xl font-semibold hover:text-pink-600" href="./3Dgame.html"> <!-- 設定字體, 連結 -->
-                        3D遊戲
-                    </a>
-
-                    <a class="text-white text-3xl font-semibold hover:text-pink-600" href="./2Dgame.html"> <!-- 設定字體, 連結 -->
-                        2D遊戲
-                    </a>
+        <section class="slider-wrapper h-full grid place-content-center">
+            <div class="w-full absolute pb-6 z-10"> <!-- 導覽列: 全寬, 固定 -->
+                <div class="grid grid-cols-2"> <!-- 用 grid 把導覽列拆成兩塊 -->
+                    <div class="col-start-1 pt-6 pl-6 flex gap-8"> <!-- 第一塊在起點, padding 左上各6, 搭配 flex 把 gap 設為 8 -->
+                        <a class="text-white text-3xl font-semibold hover:underline" href="./index.html"> <!-- 設定字體, 連結 -->
+                            首頁
+                        </a>
+    
+                        <a class="text-white text-3xl font-semibold hover:underline" href="./about.html"> <!-- 設定字體, 連結 -->
+                            關於
+                        </a>
+                    </div>
+    
+                    <div class="col-end-3 pt-6 pr-6 flex gap-8 flex-row-reverse"> <!-- 第二塊在終點, padding 右上各6, 搭配 flex 把 gap 設為 8, 並用 row-reverse 使其靠右 -->
+                        <a class="text-white text-3xl font-semibold hover:underline" href="./3Dgame.html"> <!-- 設定字體, 連結 -->
+                            3D遊戲
+                        </a>
+    
+                        <a class="text-white text-3xl font-semibold hover:underline" href="./2Dgame.html"> <!-- 設定字體, 連結 -->
+                            2D遊戲
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="h-full grid place-content-center bg-gray-800"> <!-- 標題: 區域全高, 置中, 灰底 -->
-            <div class="text-white text-9xl font-semibold mt-6"> <!-- 設定字體 -->
-                李易的工作室
-            </div>
-        </div>
+            <button class="slide-arrow" id="slide-arrow-prev">
+
+            </button>
+            <button class="slide-arrow" id="slide-arrow-next">
+
+            </button>
+            <ul class="slides-container" id="slides-container">
+                <li class="slide text-white text-9xl font-semibold flex items-center justify-center">李易的工作室</li>
+                <li class="slide text-white text-9xl font-semibold flex items-center justify-center">李易的工作室</li>
+                <li class="slide text-white text-9xl font-semibold flex items-center justify-center">李易的工作室</li>
+                <li class="slide text-white text-9xl font-semibold flex items-center justify-center">李易的工作室</li>
+            </ul>
+        </section>
     </div>
     <!-- <div class="w-full flex justify-center border">
         文字: 全寬, 置中, 邊線
@@ -132,6 +142,7 @@
             </div>
         </div>
     </div>
+    <script src="assets/js/slider.js"></script>
 </body>
 
 </html>
