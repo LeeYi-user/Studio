@@ -6,41 +6,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
     <title>LeeYi Studio</title>
+    <link href="assets/css/slider.css" rel="stylesheet">
 </head>
 
 <body class="h-screen"> <!-- 主體: 全高 -->
     <div class="w-full h-[calc(100vh-212px)]"> <!-- 導覽列 + 標題: 全寬, -212高 -->
-        <div class="w-full fixed bg-gray-900 pb-6"> <!-- 導覽列: 全寬, 固定, 灰底 -->
-            <div class="grid grid-cols-2"> <!-- 用 grid 把導覽列拆成兩塊 -->
-                <div class="col-start-1 pt-6 pl-6 flex gap-8"> <!-- 第一塊在起點, padding 左上各6, 搭配 flex 把 gap 設為 8 -->
-                    <a class="text-white text-3xl font-semibold hover:text-pink-600" href="./index.html"> <!-- 設定字體, 連結 -->
-                        首頁
-                    </a>
-
-                    <a class="text-white text-3xl font-semibold hover:text-pink-600" href="./about.html"> <!-- 設定字體, 連結 -->
-                        關於
-                    </a>
-                </div>
-
-                <div class="col-end-3 pt-6 pr-6 flex gap-8 flex-row-reverse"> <!-- 第二塊在終點, padding 右上各6, 搭配 flex 把 gap 設為 8, 並用 row-reverse 使其靠右 -->
-                    <a class="text-white text-3xl font-semibold hover:text-pink-600" href="./3Dgame.html"> <!-- 設定字體, 連結 -->
-                        3D遊戲
-                    </a>
-
-                    <a class="text-white text-3xl font-semibold hover:text-pink-600" href="./2Dgame.html"> <!-- 設定字體, 連結 -->
-                        2D遊戲
-                    </a>
+        <section class="slider-wrapper h-full grid place-content-center">
+            <div class="w-full absolute pb-6 z-10"> <!-- 導覽列: 全寬, 固定 -->
+                <div class="grid grid-cols-2"> <!-- 用 grid 把導覽列拆成兩塊 -->
+                    <div class="col-start-1 pt-6 pl-6 flex gap-8"> <!-- 第一塊在起點, padding 左上各6, 搭配 flex 把 gap 設為 8 -->
+                        <a class="text-white text-3xl font-semibold hover:underline" href="./index.html"> <!-- 設定字體, 連結 -->
+                            首頁
+                        </a>
+    
+                        <a class="text-white text-3xl font-semibold hover:underline" href="./about.html"> <!-- 設定字體, 連結 -->
+                            關於
+                        </a>
+                    </div>
+    
+                    <div class="col-end-3 pt-6 pr-6 flex gap-8 flex-row-reverse"> <!-- 第二塊在終點, padding 右上各6, 搭配 flex 把 gap 設為 8, 並用 row-reverse 使其靠右 -->
+                        <a class="text-white text-3xl font-semibold hover:underline" href="./game.html"> <!-- 設定字體, 連結 -->
+                            遊戲
+                        </a>
+    
+                        <a class="text-white text-3xl font-semibold hover:underline" href="./music.html"> <!-- 設定字體, 連結 -->
+                            音樂
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="h-full grid place-content-center bg-gray-800"> <!-- 標題: 區域全高, 置中, 灰底 -->
-            <div class="text-white text-9xl font-semibold mt-6"> <!-- 設定字體 -->
-                作品集
-            </div>
-        </div>
+            <button class="slide-arrow" id="slide-arrow-prev">
+
+            </button>
+            <button class="slide-arrow" id="slide-arrow-next">
+
+            </button>
+            <ul class="slides-container" id="slides-container">
+                <li class="slide text-white text-9xl font-semibold flex items-center justify-center">李易的工作室</li>
+                <li class="slide text-white text-9xl font-semibold flex items-center justify-center">李易的工作室</li>
+                <li class="slide text-white text-9xl font-semibold flex items-center justify-center">李易的工作室</li>
+                <li class="slide text-white text-9xl font-semibold flex items-center justify-center">李易的工作室</li>
+            </ul>
+        </section>
     </div>
     <div class="w-full flex justify-center border">
-        <article class="flex bg-white transition" id="fps-microgame">
+        <article class="flex bg-white transition" id="tetris">
             <div class="rotate-180 p-2 [writing-mode:_vertical-lr]">
               <time
                 datetime="2022-10-10"
@@ -55,7 +65,55 @@
             <div class="hidden sm:block sm:basis-56">
               <img
                 alt=""
-                src="assets\images\3Dgame.jpg"
+                src="assets\images\tetris.png"
+                class="aspect-square h-full w-full object-cover"
+              />
+            </div>
+          
+            <div class="flex flex-1 flex-col justify-between">
+              <div class="border-s border-gray-900/10 p-4 sm:border-l-transparent sm:p-6">
+                <a href="#tetris">
+                  <h3 class="font-bold uppercase text-gray-900">
+                    Tetris
+                  </h3>
+                </a>
+          
+                <p class="mt-2 line-clamp-3 text-sm/relaxed text-gray-700">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae dolores, possimus
+                  pariatur animi temporibus nesciunt praesentium dolore sed nulla ipsum eveniet corporis
+                  quidem, mollitia itaque minus soluta, voluptates neque explicabo tempora nisi culpa eius
+                  atque dignissimos. Molestias explicabo corporis voluptatem?
+                </p>
+              </div>
+          
+              <div class="sm:flex sm:items-end sm:justify-end">
+                <a
+                  href="./game/tetris.html"
+                  class="block bg-yellow-300 px-5 py-3 text-center text-xs font-bold uppercase text-gray-900 transition hover:bg-yellow-400"
+                >
+                  Read Post
+                </a>
+              </div>
+            </div>
+        </article>
+    </div>
+    <div class="w-full flex justify-center border">
+        <article class="flex bg-white transition" id="fps-microgame">
+            <div class="rotate-180 p-2 [writing-mode:_vertical-lr]">
+              <time
+                datetime="2023-11-10"
+                class="flex items-center justify-between gap-4 text-xs font-bold uppercase text-gray-900"
+              >
+                <span>2023</span>
+                <span class="w-px flex-1 bg-gray-900/10"></span>
+                <span>Nov 10</span>
+              </time>
+            </div>
+          
+            <div class="hidden sm:block sm:basis-56">
+              <img
+                alt=""
+                src="assets\images\fps-microgame.jpg"
                 class="aspect-square h-full w-full object-cover"
               />
             </div>
@@ -78,7 +136,7 @@
           
               <div class="sm:flex sm:items-end sm:justify-end">
                 <a
-                  href="./3Dgame/fps-microgame.html"
+                  href="./game/fps-microgame.html"
                   class="block bg-yellow-300 px-5 py-3 text-center text-xs font-bold uppercase text-gray-900 transition hover:bg-yellow-400"
                 >
                   Read Post
@@ -148,13 +206,13 @@
                         </a>
                     </li>
                     <li class="mt-2">
-                        <a class="text-gray-500 hover:text-gray-700" href="./2Dgame.html">
-                            2D遊戲
+                        <a class="text-gray-500 hover:text-gray-700" href="./music.html">
+                            音樂
                         </a>
                     </li>
                     <li class="mt-2">
-                        <a class="text-gray-500 hover:text-gray-700" href="./3Dgame.html">
-                            3D遊戲
+                        <a class="text-gray-500 hover:text-gray-700" href="./game.html">
+                            遊戲
                         </a>
                     </li>
                 </ul>
@@ -177,6 +235,7 @@
             </div>
         </div>
     </div>
+    <script src="assets/js/slider.js"></script>
 </body>
 
 </html>
